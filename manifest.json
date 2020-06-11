@@ -1,0 +1,35 @@
+{
+   "name": "MailTrout",
+   "version": "1.4",
+   "description": "Detect phishing emails with natural language processing",
+   "permissions": [
+      "activeTab",
+      "declarativeContent",
+      "storage",
+      "tabs",
+      "<all_urls>"
+   ],
+   "background": {
+      "scripts": [
+         "background.js"
+      ],
+      "persistent": true
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://mayar.abertay.ac.uk/ https://ajax.googleapis.com https://unpkg.com; object-src 'self' https://mayar.abertay.ac.uk/",
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+         "16": "images/mt16.png",
+         "32": "images/mt32.png",
+         "48": "images/mt48.png",
+         "128": "images/mt128.png"
+      }
+   },
+   "icons": {
+      "16": "images/mt16.png",
+      "32": "images/mt32.png",
+      "48": "images/mt48.png",
+      "128": "images/mt128.png"
+   },
+   "manifest_version": 2
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        :root {
+            --g1: #ffe99f;
+            --g2: #ffdc62;
+            --g3: #ffc90e;
+            --g4: #df9f0a;
+            --g5: #a77707;
+            --t1: #d6f0f7;
+            --t2: #99d9ea;
+            --t3: #3eb8d7;
+            --t4: #2e8aa1;
+            --t5: #1f5c6b;
+        }
+
+        body {
+            background-color: var(--t5);
+            color: white;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            float: center;
+        }
+
+        #logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #icon {
+            display: inline;
+            vertical-align: sub;
+        }
+
+        h1 {
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0px;
+            text-align: center;
+            max-width: 750px;
+            float: center;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            max-width: 750px;
+            float: center;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: normal;
+            margin: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            max-width: 80vw;
+            float: center;
+        }
+
+        button {
+            display: inline;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.3);
+            background: var(--g4);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+
+        button:hover {
+            background-color: var(--g3);
+        }
+    </style>
+</head>
+
+<body>
+    <img id="logo" src="images/mt-v.png" width="340px">
+    <h1>Welcome to MailTrout,</h1>
+    <h2>a Google Chrome browser extension that uses language analysis to detect phishing emails.</h2>
+
+    <p>To use MailTrout to analyse an email, highlight the email text in your web mail client, and select the <img
+            id="icon" src="images/mt128.png" width="24px"> icon at the top right of your browser window.</p>
+
+    <p>Once the MailTrout popup has appeared, press the <button id="button">Analyse this text</button> button to analyse
+        your selected text and predict if your email
+        is legitimate or a phishing attempt.</p>
+
+    <p>MailTrout will display the results of its analysis, as well as any suggestions about what you should do next.</p>
+</body>

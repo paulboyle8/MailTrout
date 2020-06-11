@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+
+  <style>
+    :root {
+      --g1: #ffe99f;
+      --g2: #ffdc62;
+      --g3: #ffc90e;
+      --g4: #df9f0a;
+      --g5: #a77707;
+      --t1: #d6f0f7;
+      --t2: #99d9ea;
+      --t3: #3eb8d7;
+      --t4: #2e8aa1;
+      --t5: #1f5c6b;
+    }
+
+    body {
+      background-color: var(--t5);
+      color: white;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    .msg {
+      text-align: center;
+    }
+
+    #help {
+      display: block;
+      width: 326px;
+      font-size: 14px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0px;
+      padding: 0px;
+      margin-block-start: 0px;
+    }
+
+    #attr {
+      font-size: 10px;
+      color: var(--t3);
+      text-align: center;
+    }
+
+    #output {
+      display: inline-block;
+    }
+
+    button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.3);
+      background: var(--g4);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      cursor: pointer;
+      transition-duration: 0.5s;
+    }
+
+    button:hover {
+      background-color: var(--g3);
+    }
+
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--g4);
+      border-radius: 10px;
+      transition-duration: 0.5s;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--g3);
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .icon {
+      float: left;
+      margin-right: 0px;
+      padding-top: auto;
+      padding-bottom: auto;
+    }
+
+    .inst {
+      flex: 75%;
+      float: left;
+      padding-top: auto;
+      padding-bottom: auto;
+    }
+
+    .inIcon {
+      flex: 25%;
+      float: left;
+    }
+
+    #logo {
+      margin-left: 128px;
+    }
+
+    .clearfix {
+      padding: 5px;
+      margin: 10px 0px;
+      display: flex;
+    }
+
+    ul {
+      list-style-position: inline;
+    }
+
+    li {
+      font-size: 13px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div style="width: 384px">
+    <button id="instr" style="float: right">?</button><br>
+    <img id="logo" src="images/mt-v.png" width="128px">
+    <br>
+    <div id="ring">
+      <img id="loading" src="images/ring.gif" width="128px">
+      <div id="attr">icon 'double ring' from loading.io</div>
+    </div>
+  </div>
+  <div class="msg" id="help">
+    <h3>In your browser, highlight some text you want to analyse.</h3>
+  </div>
+  <button id="button">Analyse this text</button>
+  <div class="msg" id="output"></div>
+  <script src="popup.js"></script>
+  <script src="wordIndex.js"></script>
+  <div id="sug">
+    <div class="clearfix">
+      <div class="inIcon"><img class="icon" src="images/look.png" width="90px" height="90px"></div>
+      <div class="inst">
+        <ul id="look">
+          <h3>Look out for:</h3>
+          <li>Urgency and time-sensitivity.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix">
+      <div class="inIcon"><img class="icon" src="images/do.png" width="90px" height="90px"></div>
+      <div class="inst">
+        <ul id="do">
+          <h3>Do:</h3>
+          <li>Mark the email as spam.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix">
+      <div class="inIcon"><img src="images/dont.png" width="90px" height="90px"></div>
+      <div class="inst">
+        <ul id="dont">
+          <h3>Don't:</h3>
+          <li>Click on any links or open any attachments.</li>
+          <li>Send any money or information to the sender.</li>
+          <li>Respond to the sender.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
